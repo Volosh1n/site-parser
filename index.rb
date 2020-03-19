@@ -1,21 +1,19 @@
 require 'sinatra'
-require_relative 'autoload.rb'
+require './autoload.rb'
 
-# TODO: refactor this...
+set :views, settings.root + '/app/views'
 
 get '/' do
-  brands = ['Subaru', 'Audi', 'Volvo']
-  links = brands.map do |brand|
-    "<a href='/#{brand.downcase}'>#{brand}</a><br>"
-  end.join
-  erb links
+  erb 'cars/index'.to_sym
 end
 
 get '/:brand' do
-  back_button = "<a href='/'>Back</>"
-  cars = CarsParser.new("https://losangeles.craigslist.org/search/cto?query=#{params[:brand]}").call
-  cars_list = cars.map do |car|
-    "<div><a href=#{car[:link]}>#{car[:label].split(' ').map(&:capitalize).join(' ')}</a>: <b>#{car[:price]}</b></div>"
-  end.join
-  erb [back_button, cars_list].join('<hr>')
+  cars = CarsParser.call("https://losangeles.craigslist.org/search/cto?auto_make_model=#{params[:brand]}").cars_list
+  erb 'cars/show'.to_sym, locals: { cars: cars }
+end
+
+get '/:brand/:model' do
+  selected = [params[:brand], params[:model]].join('+')
+  cars = CarsParser.call("https://losangeles.craigslist.org/search/cto?auto_make_model=#{selected}").cars_list
+  erb 'cars/show'.to_sym, locals: { cars: cars }
 end
