@@ -1,0 +1,12 @@
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Security/Open:
+  Exclude:
+    - app/services/base_parser.rb
