@@ -1,6 +1,6 @@
 %a{href: "/"} Back
 %hr
-- cars.map do |car|
+- @cars.map do |car|
   %div
     %a{href: "#{car[:link]}", rel: "noopener", target: "_blank"}
       = car[:label].split(' ').map(&:capitalize).join(' ')
