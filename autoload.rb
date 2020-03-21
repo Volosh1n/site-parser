@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'yaml'
 require 'pry'
 require 'open-uri'
 

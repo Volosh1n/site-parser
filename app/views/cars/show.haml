@@ -1,7 +1,15 @@
-%a{href: "/"} Back
+%a{ href: '#', onclick: "back()" } Back
+%br
+
+- if @models
+  - @models.each do |model|
+    %a{ href: "/#{@brand}/#{model}".downcase }
+      = model
+    %span= ' '
+
 %hr
-- @cars.map do |car|
+- @cars.each do |car|
   %div
-    %a{href: "#{car[:link]}", rel: "noopener", target: "_blank"}
+    %a{ href: "#{car[:link]}", rel: "noopener", target: "_blank" }
       = car[:label].split(' ').map(&:capitalize).join(' ')
     %b= car[:price]
