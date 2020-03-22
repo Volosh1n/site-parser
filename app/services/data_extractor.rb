@@ -1,12 +1,12 @@
 class DataExtractor
-  DATA_FOLDER_PATH = "#{File.expand_path("../../app/data", __dir__)}"
+  DATA_FOLDER_PATH = File.expand_path('../../app/data', __dir__).to_s.freeze
 
   def initialize(file_name)
     @file_name = file_name
   end
 
   def call
-    YAML.load(File.read("#{DATA_FOLDER_PATH}/#{file_name}.yml"))
+    YAML.safe_load(File.read("#{DATA_FOLDER_PATH}/#{file_name}.yml"))
   end
 
   private
