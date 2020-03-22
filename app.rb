@@ -1,4 +1,6 @@
 class App < Sinatra::Base
+  CARS_URL = 'https://losangeles.craigslist.org/search/cto?auto_make_model='
+
   set :views, settings.root + '/app/views'
 
   get '/' do
@@ -9,13 +11,13 @@ class App < Sinatra::Base
   get '/:brand' do
     @brand = params[:brand].split(' ').map(&:capitalize).join(' ')
     @models = car_brands[@brand]
-    @cars = CarsParser.new("https://losangeles.craigslist.org/search/cto?auto_make_model=#{@brand}").call
+    @cars = CarsParser.new([CARS_URL, @brand].join).call
     haml 'cars/show'.to_sym
   end
 
   get '/:brand/:model' do
     @car = [params[:brand], params[:model]].join('+').downcase
-    @cars = CarsParser.new("https://losangeles.craigslist.org/search/cto?auto_make_model=#{@car}").call
+    @cars = CarsParser.new([CARS_URL, @car].join).call
     haml 'cars/show'.to_sym
   end
 
