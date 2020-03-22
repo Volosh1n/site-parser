@@ -9,13 +9,13 @@ class App < Sinatra::Base
   get '/:brand' do
     @brand = params[:brand].split(' ').map(&:capitalize).join(' ')
     @models = car_brands[@brand]
-    @cars = CarsParser.call("https://losangeles.craigslist.org/search/cto?auto_make_model=#{@brand}").cars_list
+    @cars = CarsParser.new("https://losangeles.craigslist.org/search/cto?auto_make_model=#{@brand}").call
     haml 'cars/show'.to_sym
   end
 
   get '/:brand/:model' do
     @car = [params[:brand], params[:model]].join('+').downcase
-    @cars = CarsParser.call("https://losangeles.craigslist.org/search/cto?auto_make_model=#{@car}").cars_list
+    @cars = CarsParser.new("https://losangeles.craigslist.org/search/cto?auto_make_model=#{@car}").call
     haml 'cars/show'.to_sym
   end
 
