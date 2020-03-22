@@ -1,5 +1,7 @@
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter('/')
+end
 SimpleCov.minimum_coverage(98)
 
 require_relative '../autoload.rb'
