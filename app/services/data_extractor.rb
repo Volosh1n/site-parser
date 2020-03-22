@@ -6,7 +6,7 @@ class DataExtractor
   end
 
   def call
-    YAML.safe_load(File.read("#{DATA_FOLDER_PATH}/#{file_name}.yml"))
+    YAML.load_file("#{DATA_FOLDER_PATH}/#{file_name}.yml", {})
   end
 
   private

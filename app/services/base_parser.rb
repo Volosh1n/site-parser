@@ -1,15 +1,15 @@
 class BaseParser
-  def self.call(*args)
-    new(*args)
+  def initialize(link)
+    @link = link
+  end
+
+  def call
+    raise NotImplementedError
   end
 
   private
 
   attr_reader :link
-
-  def initialize(link)
-    @link = link
-  end
 
   def doc
     @doc ||= Nokogiri::HTML(open(link))
