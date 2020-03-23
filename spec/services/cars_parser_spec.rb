@@ -6,7 +6,7 @@ RSpec.describe CarsParser do
   describe '#call' do
     it 'returns array of hashes' do
       expect(service.call).to be_a(Array)
-      expect(service.call.all?(Hash)).to be_truthy
+      expect(service.call).to be_all(Hash)
     end
 
     it 'hashes matches expected keys' do
