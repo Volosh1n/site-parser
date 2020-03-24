@@ -1,8 +1,8 @@
 require 'simplecov'
+
 SimpleCov.start do
-  add_filter('/')
+  add_filter('app/services/dispacther.rb') # TODO: provide specs for it
 end
-SimpleCov.minimum_coverage(98)
 
 require_relative '../autoload.rb'
 

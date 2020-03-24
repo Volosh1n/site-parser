@@ -1,7 +1,7 @@
 RSpec.describe DataExtractor do
   subject(:service) { described_class.new(file_name) }
 
-  let(:file_name) { 'car_brands' }
+  let(:file_name) { 'cars' }
 
   describe '#initialize' do
     it 'initializes name of file to be parsed' do
