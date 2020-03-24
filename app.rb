@@ -1,7 +1,12 @@
 class App < Sinatra::Base
-  CARS_URL = 'https://losangeles.craigslist.org/search/cto?auto_make_model='
+  CARS_URL = 'https://losangeles.craigslist.org/search/cto?auto_make_model='.freeze
+  DEFAULT_TITLE = 'Cars ad parsing app'.freeze
 
   set :views, settings.root + '/app/views'
+
+  before do
+    @title = DEFAULT_TITLE
+  end
 
   get '/' do
     @brands = car_brands.keys.sort
@@ -10,6 +15,7 @@ class App < Sinatra::Base
 
   get '/:brand' do
     @brand = params[:brand].split(' ').map(&:capitalize).join(' ')
+    @title = [@brand, DEFAULT_TITLE].join(' | ')
     @models = car_brands[@brand]
     @cars = CarsParser.new([CARS_URL, @brand].join).call
     haml 'cars/show'.to_sym
@@ -17,6 +23,7 @@ class App < Sinatra::Base
 
   get '/:brand/:model' do
     @car = [params[:brand], params[:model]].join('+').downcase
+    @title = "#{params[:brand].capitalize} #{params[:model].capitalize} | #{DEFAULT_TITLE}"
     @cars = CarsParser.new([CARS_URL, @car].join).call
     haml 'cars/show'.to_sym
   end
