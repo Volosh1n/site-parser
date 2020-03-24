@@ -49,10 +49,9 @@ class Dispatcher
   end
 
   def model_path_params
-    car = [params[:brand], params[:model]].join('+').downcase
-    cars = CarsParser.new([CARS_URL, car].join).call
+    model = [params[:brand], params[:model]].join('+').downcase
+    cars = CarsParser.new([CARS_URL, model].join).call
     {
-      :@car => car,
       :@title => "#{params[:brand].capitalize} #{params[:model].capitalize} | #{DEFAULT_TITLE}",
       :@cars => cars
     }
