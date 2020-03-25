@@ -18,3 +18,7 @@ RSpec/MessageSpies:
 
 RSpec/MultipleExpectations:
   Max: 3
+
+Metrics/AbcSize:
+  Exclude:
+    - app/services/dispatcher.rb

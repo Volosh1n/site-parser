@@ -26,14 +26,12 @@ Chevrolet:
   - Captiva
   - Corvette
   - Cruze
-  - Cruze SW
   - Epica
   - Equinox
   - Evanda
   - HHR
   - Kalos
   - Lacetti
-  - Lacetti SW
   - Lumina
   - Malibu
   - Matiz
@@ -60,14 +58,7 @@ Porsche:
   - Panamera
 Honda:
   - Accord
-  - Accord Coupé
-  - Accord Tourer
-  - City
   - Civic
-  - Civic Aerodeck
-  - Civic Coupé
-  - Civic Tourer
-  - Civic Type R
   - CR-V
   - CR-X
   - CR-Z
@@ -91,7 +82,6 @@ Subaru:
   - Outback
   - SVX
   - Tribeca
-  - Tribeca B9
   - XV
 Mazda:
   - '121'
@@ -99,7 +89,6 @@ Mazda:
   - '3'
   - '323'
   - 323 Combi
-  - 323 Coupé
   - 323 F
   - '5'
   - '6'
@@ -135,7 +124,6 @@ Mitsubishi:
   - Grandis
   - L200
   - L200 Pick up
-  - L200 Pick up Allrad
   - L300
   - Lancer
   - Lancer Combi
@@ -143,10 +131,7 @@ Mitsubishi:
   - Lancer Sportback
   - Outlander
   - Pajero
-  - Pajeto Pinin
-  - Pajero Pinin Wagon
   - Pajero Sport
-  - Pajero Wagon
   - Space Star
 Lexus:
   - CT
@@ -213,10 +198,7 @@ BMW:
   - X5
   - X6
   - Z3
-  - Z3 Coupé
-  - Z3 Roadster
   - Z4
-  - Z4 Roadster
 Volkswagen:
   - Amarok
   - Beetle
@@ -229,8 +211,6 @@ Volkswagen:
   - Caravelle
   - CC
   - Crafter
-  - Crafter Van
-  - Crafter Kombi
   - CrossTouran
   - Eos
   - Fox
@@ -246,10 +226,7 @@ Volkswagen:
   - New Beetle
   - New Beetle Cabrio
   - Passat
-  - Passat Alltrack
   - Passat CC
-  - Passat Variant
-  - Passat Variant Van
   - Phaeton
   - Polo
   - Polo Van
@@ -269,9 +246,7 @@ Volkswagen:
 Suzuki:
   - Alto
   - Baleno
-  - Baleno kombi
   - Grand Vitara
-  - Grand Vitara XL-7
   - Ignis
   - Jimny
   - Kizashi
@@ -282,7 +257,6 @@ Suzuki:
   - SX4
   - SX4 Sedan
   - Vitara
-  - Wagon R+
 Mercedes-Benz:
   - 100 D
   - '115'
@@ -295,35 +269,22 @@ Mercedes-Benz:
   - 200 D
   - 200 E
   - 210 Van
-  - 210 kombi
   - 310 Van
-  - 310 kombi
-  - 230 - 300 CE Coupé
-  - 260 - 560 SE
-  - 260 - 560 SEL
-  - 500 - 600 SEC Coupé
   - Trieda A
   - A
-  - A L
   - AMG GT
   - Trieda B
   - Trieda C
   - C
-  - C Sportcoupé
-  - C T
   - Citan
   - CL
   - CL
   - CLA
   - CLC
   - CLK Cabrio
-  - CLK Coupé
   - CLS
   - Trieda E
   - E
-  - E Cabrio
-  - E Coupé
-  - E T
   - Trieda G
   - G Cabrio
   - GL
@@ -336,7 +297,6 @@ Mercedes-Benz:
   - Trieda R
   - Trieda S
   - S
-  - S Coupé
   - SL
   - SLC
   - SLK
@@ -345,7 +305,6 @@ Mercedes-Benz:
 Saab:
   - 9-3
   - 9-3 Cabriolet
-  - 9-3 Coupé
   - 9-3 SportCombi
   - 9-5
   - 9-5 SportCombi
@@ -396,7 +355,6 @@ Audi:
   - S7
   - S8
   - SQ5
-  - TT Coupé
   - TT Roadster
   - TTS
 Kia:
@@ -404,17 +362,14 @@ Kia:
   - Besta
   - Carens
   - Carnival
-  - Cee`d
-  - Cee`d SW
+  - Ceed
   - Cerato
-  - K 2500
   - Magentis
   - Opirus
   - Optima
   - Picanto
   - Pregio
   - Pride
-  - Pro Cee`d
   - Rio
   - Rio Combi
   - Rio sedan
@@ -425,7 +380,6 @@ Kia:
   - Sportage
   - Venga
 Land Rover:
-  - '109'
   - Defender
   - Discovery
   - Discovery Sport
@@ -516,7 +470,6 @@ Hyundai:
   - Accent
   - Atos
   - Atos Prime
-  - Coupé
   - Elantra
   - Galloper
   - Genesis
@@ -548,7 +501,6 @@ Infiniti:
   - EX
   - FX
   - G
-  - G Coupé
   - M
   - Q
   - QX
@@ -588,9 +540,6 @@ Nissan:
   - 370 Z
   - Almera
   - Almera Tino
-  - Cabstar E - T
-  - Cabstar TL2 Valnik
-  - e-NV200
   - GT-R
   - Insterstar
   - Juke
@@ -607,7 +556,6 @@ Nissan:
   - NV400
   - Pathfinder
   - Patrol
-  - Patrol GR
   - Pickup
   - Pixo
   - Primastar
@@ -633,7 +581,6 @@ Volvo:
   - C30
   - C70
   - C70 Cabrio
-  - C70 Coupé
   - S40
   - S60
   - S70
@@ -657,7 +604,6 @@ Fiat:
   - Barchetta
   - Brava
   - Cinquecento
-  - Coupé
   - Croma
   - Doblo
   - Doblo Cargo
@@ -720,9 +666,7 @@ Rover:
   - '75'
 Smart:
   - Cabrio
-  - City-Coupé
   - Compact Pulse
   - Forfour
   - Fortwo cabrio
-  - Fortwo coupé
   - Roadster
