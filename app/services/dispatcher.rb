@@ -6,9 +6,14 @@ class Dispatcher
     @request_path = request_path
   end
 
-  def call
-    check_path
+  def check_path
+    case request_path.split('/').reject(&:empty?).size
+    when 0 then root_path_params
+    when 1 then brand_path_params
+    when 2 then model_path_params
+    end
   end
+  alias call check_path
 
   private
 
@@ -21,14 +26,6 @@ class Dispatcher
     { brand: car_full_name.first, model: car_full_name.last }
   end
 
-  def check_path
-    case request_path.split('/').reject(&:empty?).size
-    when 0 then root_path_params
-    when 1 then brand_path_params
-    when 2 then model_path_params
-    end
-  end
-
   def root_path_params
     {
       :@brands => car_brands.keys.sort,
@@ -38,7 +35,7 @@ class Dispatcher
   end
 
   def brand_path_params
-    brand = params[:brand].split(' ').map(&:capitalize).join(' ')
+    brand = params[:brand].split('%20').map(&:capitalize).join(' ')
     cars = CarsParser.new([CARS_URL, brand].join).call
     {
       :@brand => brand,
