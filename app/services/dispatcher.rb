@@ -2,12 +2,12 @@ class Dispatcher
   CARS_URL = 'https://losangeles.craigslist.org/search/cto?auto_make_model='.freeze
   DEFAULT_TITLE = 'Cars ad parsing app'.freeze
 
-  def initialize(request_path)
-    @request_path = request_path
+  def initialize(path)
+    @path = path
   end
 
   def check_path
-    case request_path.split('/').reject(&:empty?).size
+    case path.split('/').reject(&:empty?).size
     when 0 then root_path_params
     when 1 then brand_path_params
     when 2 then model_path_params
@@ -17,10 +17,10 @@ class Dispatcher
 
   private
 
-  attr_reader :request_path
+  attr_reader :path
 
   def params
-    car_full_name = request_path.split('/').reject(&:empty?)
+    car_full_name = path.split('/').reject(&:empty?)
     return { brand: car_full_name.first } if car_full_name.size == 1
 
     { brand: car_full_name.first, model: car_full_name.last }
