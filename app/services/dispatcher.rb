@@ -1,30 +1,22 @@
 class Dispatcher
   CARS_URL = 'https://losangeles.craigslist.org/search/cto?auto_make_model='.freeze
-  DEFAULT_TITLE = 'Cars ad parsing app'.freeze
+  DEFAULT_TITLE = 'Craigslist\'s cars ads parsing app'.freeze
 
-  def initialize(request_path)
-    @request_path = request_path
+  def initialize(params)
+    @params = params
   end
 
-  def check_path
-    case request_path.split('/').reject(&:empty?).size
+  def call
+    case params.keys.size
     when 0 then root_path_params
     when 1 then brand_path_params
     when 2 then model_path_params
     end
   end
-  alias call check_path
 
   private
 
-  attr_reader :request_path
-
-  def params
-    car_full_name = request_path.split('/').reject(&:empty?)
-    return { brand: car_full_name.first } if car_full_name.size == 1
-
-    { brand: car_full_name.first, model: car_full_name.last }
-  end
+  attr_reader :params
 
   def root_path_params
     {
@@ -39,7 +31,7 @@ class Dispatcher
     cars = CarsParser.new([CARS_URL, brand].join).call
     {
       :@brand => brand,
-      :@title => [brand, DEFAULT_TITLE].join(' | '),
+      :@title => prepend_title(brand),
       :@models => car_brands[brand],
       :@cars => cars
     }
@@ -48,13 +40,15 @@ class Dispatcher
   def model_path_params
     model = [params[:brand], params[:model]].join('+').downcase
     cars = CarsParser.new([CARS_URL, model].join).call
-    {
-      :@title => "#{params[:brand].capitalize} #{params[:model].capitalize} | #{DEFAULT_TITLE}",
-      :@cars => cars
-    }
+    title = prepend_title("#{params[:brand].capitalize} #{params[:model].capitalize}")
+    { :@title => title, :@cars => cars }
   end
 
   def car_brands
     @car_brands ||= DataExtractor.new('cars').call
+  end
+
+  def prepend_title(page_title)
+    "#{page_title} | #{DEFAULT_TITLE}"
   end
 end
