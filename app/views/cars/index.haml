@@ -1,4 +1,5 @@
-- @brands.map do |brand|
-  %a{href: "#{brand.downcase}"}
-    = brand
-  %br
+%ul.list-group
+  - @brands.map do |brand|
+    %li.list-group-item
+      %a{href: "#{brand.downcase}"}
+        = brand

@@ -1,15 +1,19 @@
-%a{ href: '#', id: 'back' } Back
+%a#back.btn.btn-primary{ href: '#'} Back
 %br
 
 - if @models
-  - @models.each do |model|
-    %a{ href: "/#{@brand}/#{model}".downcase }
-      = model
-    %span= ' '
+  %br
+  %ul.list-inline
+    - @models.each do |model|
+      %li.list-inline-item
+        %a{ href: "/#{@brand}/#{model}".downcase }
+          = model
+        %span= ' '
 
 %hr
-- @cars.each do |car|
-  %div
-    %a{ href: "#{car[:link]}", rel: "noopener", target: "_blank" }
-      = car[:label].split(' ').map(&:capitalize).join(' ')
-    %b= car[:price]
+%ul.list-group
+  - @cars.each do |car|
+    %li.list-group-item
+      %a{ href: "#{car[:link]}", rel: "noopener", target: "_blank" }
+        = car[:label].slice(0,1).capitalize + car[:label].slice(1..-1)
+      %b= car[:price]
