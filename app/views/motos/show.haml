@@ -1,4 +1,4 @@
-%a.btn.btn-primary{ href: '/cars'} Back
+%a.btn.btn-primary{ href: '/motos'} Back
 %br
 
 - if @models
@@ -6,7 +6,7 @@
   %ul.list-inline
     - @models.each do |model|
       %li.list-inline-item
-        %a{ href: "/cars/#{@brand}/#{model}".downcase }
+        %a{ href: "/motos/#{@brand}/#{model}".downcase }
           = model
 
 %hr

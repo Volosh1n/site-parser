@@ -1,5 +1,5 @@
 ---
-Alfa Romeo:
+alfa romeo:
   - '145'
   - '146'
   - '147'
@@ -19,7 +19,7 @@ Alfa Romeo:
   - GT
   - Giulietta
   - Giulia
-Chevrolet:
+chevrolet:
   - Alero
   - Aveo
   - Camaro
@@ -43,7 +43,7 @@ Chevrolet:
   - Tacuma
   - Tahoe
   - Trax
-Porsche:
+porsche:
   - 911 Carrera
   - 911 Carrera Cabrio
   - 911 Targa
@@ -56,7 +56,7 @@ Porsche:
   - Cayman
   - Macan
   - Panamera
-Honda:
+honda:
   - Accord
   - Civic
   - CR-V
@@ -69,7 +69,7 @@ Honda:
   - Jazz
   - Legend
   - Prelude
-Subaru:
+subaru:
   - BRZ
   - Forester
   - Impreza
@@ -83,7 +83,7 @@ Subaru:
   - SVX
   - Tribeca
   - XV
-Mazda:
+mazda:
   - '121'
   - '2'
   - '3'
@@ -111,7 +111,7 @@ Mazda:
   - RX-7
   - RX-8
   - Xedox 6
-Mitsubishi:
+mitsubishi:
   - 3000 GT
   - ASX
   - Carisma
@@ -133,7 +133,7 @@ Mitsubishi:
   - Pajero
   - Pajero Sport
   - Space Star
-Lexus:
+lexus:
   - CT
   - GS
   - GS 300
@@ -151,7 +151,7 @@ Lexus:
   - RX 400h
   - RX 450h
   - SC 430
-Toyota:
+toyota:
   - 4-Runner
   - Auris
   - Avensis
@@ -185,7 +185,7 @@ Toyota:
   - Verso
   - Yaris
   - Yaris Verso
-BMW:
+bmw:
   - i3
   - i8
   - M3
@@ -199,7 +199,7 @@ BMW:
   - X6
   - Z3
   - Z4
-Volkswagen:
+volkswagen:
   - Amarok
   - Beetle
   - Bora
@@ -243,7 +243,7 @@ Volkswagen:
   - Tiguan
   - Touareg
   - Touran
-Suzuki:
+suzuki:
   - Alto
   - Baleno
   - Grand Vitara
@@ -257,7 +257,7 @@ Suzuki:
   - SX4
   - SX4 Sedan
   - Vitara
-Mercedes-Benz:
+mercedes:
   - 100 D
   - '115'
   - '124'
@@ -302,7 +302,7 @@ Mercedes-Benz:
   - SLK
   - SLR
   - Sprinter
-Saab:
+saab:
   - 9-3
   - 9-3 Cabriolet
   - 9-3 SportCombi
@@ -312,7 +312,7 @@ Saab:
   - 900 C
   - 900 C Turbo
   - '9000'
-Audi:
+audi:
   - '100'
   - 100 Avant
   - '80'
@@ -357,7 +357,7 @@ Audi:
   - SQ5
   - TT Roadster
   - TTS
-Kia:
+kia:
   - Avella
   - Besta
   - Carens
@@ -379,7 +379,7 @@ Kia:
   - Soul
   - Sportage
   - Venga
-Land Rover:
+land rover:
   - Defender
   - Discovery
   - Discovery Sport
@@ -387,7 +387,7 @@ Land Rover:
   - Range Rover
   - Range Rover Evoque
   - Range Rover Sport
-Dodge:
+dodge:
   - Avenger
   - Caliber
   - Challenger
@@ -399,7 +399,7 @@ Dodge:
   - RAM
   - Stealth
   - Viper
-Chrysler:
+chrysler:
   - 300C
   - 300C Touring
   - 300M
@@ -416,7 +416,7 @@ Chrysler:
   - Stratus Cabrio
   - Town & Country
   - Voyager
-Ford:
+ford:
   - Aerostar
   - B-Max
   - C-Max
@@ -463,10 +463,10 @@ Ford:
   - Transit Van
   - Transit Van 350
   - Windstar
-Hummer:
+hummer:
   - H2
   - H3
-Hyundai:
+hyundai:
   - Accent
   - Atos
   - Atos Prime
@@ -497,14 +497,14 @@ Hyundai:
   - Trajet
   - Tucson
   - Veloster
-Infiniti:
+infiniti:
   - EX
   - FX
   - G
   - M
   - Q
   - QX
-Jaguar:
+jaguar:
   - Daimler
   - F-Pace
   - F-Type
@@ -524,7 +524,7 @@ Jaguar:
   - XK8 Convertible
   - XKR
   - XKR Convertible
-Jeep:
+jeep:
   - Cherokee
   - Commander
   - Compass
@@ -532,7 +532,7 @@ Jeep:
   - Patriot
   - Renegade
   - Wrangler
-Nissan:
+nissan:
   - 100 NX
   - 200 SX
   - 350 Z
@@ -571,7 +571,7 @@ Nissan:
   - Trade
   - Vanette Cargo
   - X-Trail
-Volvo:
+volvo:
   - '240'
   - '340'
   - '360'
@@ -594,7 +594,7 @@ Volvo:
   - XC60
   - XC70
   - XC90
-Fiat:
+fiat:
   - '1100'
   - '126'
   - '500'
@@ -642,7 +642,7 @@ Fiat:
   - Ulysse
   - Uno
   - X1/9
-MINI:
+mini:
   - Cooper
   - Cooper Cabrio
   - Cooper Clubman
@@ -654,7 +654,7 @@ MINI:
   - Countryman
   - Mini One
   - One D
-Rover:
+rover:
   - '200'
   - '214'
   - '218'
@@ -664,7 +664,7 @@ Rover:
   - '416'
   - '620'
   - '75'
-Smart:
+smart:
   - Cabrio
   - Compact Pulse
   - Forfour

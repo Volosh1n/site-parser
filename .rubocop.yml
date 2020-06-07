@@ -14,7 +14,7 @@ Layout/LineLength:
 
 Security/Open:
   Exclude:
-    - app/services/base_parser.rb
+    - app/services/parser.rb
 
 RSpec/MessageSpies:
   EnforcedStyle: receive
