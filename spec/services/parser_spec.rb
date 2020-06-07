@@ -1,7 +1,13 @@
-RSpec.describe CarsParser do
+RSpec.describe Parser do
   subject(:service) { described_class.new(link) }
 
   let(:link) { File.expand_path('../fixtures/page.html', __dir__) }
+
+  describe '#initialize' do
+    it 'initializes link to be parsed' do
+      expect(service.instance_variable_get(:@link)).to eq(link)
+    end
+  end
 
   describe '#call' do
     it 'returns array of hashes' do
